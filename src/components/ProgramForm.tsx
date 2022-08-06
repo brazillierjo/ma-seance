@@ -1,4 +1,5 @@
 import { Formik, Form, Field } from "formik";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllMuscles, numberOfExercices } from "../helpers/dataModuler";
 import { setInLocalStorage } from "../helpers/localStorageHandler";
@@ -25,25 +26,8 @@ export const ProgramForm: React.FC<{}> = () => {
         initialValues={initialValues}
         onSubmit={(values) => handleSubmit(values)}
       >
-        <Form>
-          <div className="grid grid-cols-5 justify-between gap-5">
-            <Field
-              as="select"
-              className="col-span-3 rounded-lg bg-lightGray p-3"
-              name="muscle"
-            >
-              {listOfMuscles.map((muscle) => (
-                <option key={muscle}>{muscle}</option>
-              ))}
-            </Field>
-            <Field
-              as="select"
-              className="col-span-2 rounded-lg bg-lightGray p-3"
-              name="numberOfExercices"
-            >
-              {numberOfExercices(10)}
-            </Field>
-          </div>
+        <Form id="container">
+          {addMuscle(listOfMuscles)}
 
           <div className="text-center">
             <button
@@ -56,5 +40,28 @@ export const ProgramForm: React.FC<{}> = () => {
         </Form>
       </Formik>
     </>
+  );
+};
+
+const addMuscle = (listOfMuscles: string[]) => {
+  return (
+    <div className="my-4 grid grid-cols-5 justify-between gap-5">
+      <Field
+        as="select"
+        className="col-span-3 rounded-lg bg-lightGray p-3"
+        name="muscle"
+      >
+        {listOfMuscles.map((muscle) => (
+          <option key={muscle}>{muscle}</option>
+        ))}
+      </Field>
+      <Field
+        as="select"
+        className="col-span-2 rounded-lg bg-lightGray p-3"
+        name="numberOfExercices"
+      >
+        {numberOfExercices(10)}
+      </Field>
+    </div>
   );
 };
