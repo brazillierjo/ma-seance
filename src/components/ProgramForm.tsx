@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllMuscles, numberOfExercices } from "../helpers/dataModuler";
 import { setInLocalStorage } from "../helpers/localStorageHandler";
+import { BsFillPlusCircleFill } from "react-icons/bs";
+import { HiMinusCircle } from "react-icons/hi";
 
 export const ProgramForm: React.FC<{}> = () => {
-  const [muscleProgram, setMuscleProgram] = useState(1);
+  const [numberOfMusclesInProgram, setNumberOfMusclesInProgram] = useState(1);
 
   const navigate = useNavigate();
 
@@ -18,8 +20,7 @@ export const ProgramForm: React.FC<{}> = () => {
 
   const handleSubmit = (values: {}) => {
     setInLocalStorage("program", values);
-
-    navigate("/programme");
+    if (numberOfMusclesInProgram > 0) navigate("/programme");
   };
 
   return (
@@ -30,18 +31,34 @@ export const ProgramForm: React.FC<{}> = () => {
       >
         <Form>
           <div id="container">
-            {[...Array(muscleProgram)].map((n, i) => (
-              <DisplayMuscleInProgram key={i} />
+            {[...Array(numberOfMusclesInProgram)].map((n, i) => (
+              <DisplayMuscleInProgram key={n} />
             ))}
           </div>
 
-          <button
-            onClick={() => setMuscleProgram(muscleProgram + 1)}
-            type="button"
-            className="rounded-md border"
-          >
-            Add
-          </button>
+          <div className="flex justify-center gap-3 text-center">
+            {numberOfMusclesInProgram > 1 && (
+              <button
+                onClick={() =>
+                  setNumberOfMusclesInProgram(numberOfMusclesInProgram - 1)
+                }
+                type="button"
+                className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
+              >
+                <HiMinusCircle color="#6466F1" size={20} />
+              </button>
+            )}
+
+            <button
+              onClick={() =>
+                setNumberOfMusclesInProgram(numberOfMusclesInProgram + 1)
+              }
+              type="button"
+              className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
+            >
+              <BsFillPlusCircleFill color="#6466F1" size={20} />
+            </button>
+          </div>
 
           <div className="text-center">
             <button
@@ -57,7 +74,7 @@ export const ProgramForm: React.FC<{}> = () => {
   );
 };
 
-export const DisplayMuscleInProgram: React.FC<{}> = () => {
+export const DisplayMuscleInProgram = (props: { key: any }) => {
   const listOfMuscles = getAllMuscles();
 
   return (
@@ -66,10 +83,10 @@ export const DisplayMuscleInProgram: React.FC<{}> = () => {
         <Field
           as="select"
           className="col-span-3 rounded-lg bg-lightGray p-3"
-          name="muscle"
+          name={`muscle-${props.key}`}
         >
-          {listOfMuscles.map((muscle) => (
-            <option key={muscle}>{muscle}</option>
+          {listOfMuscles.map((muscle, key) => (
+            <option key={key}>{muscle}</option>
           ))}
         </Field>
         <Field
