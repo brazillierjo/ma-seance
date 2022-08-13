@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getFromLocalStorage } from "../helpers/localStorageHandler";
 import exercices from "../data/workoutexercices.json";
 
 export const GeneratedProgram: React.FC<{}> = () => {
   const askedProgram = getFromLocalStorage("program");
+
+  const [program, setProgram] = useState<[] | null>();
 
   useEffect(() => {
     if (askedProgram) {
@@ -18,11 +20,9 @@ export const GeneratedProgram: React.FC<{}> = () => {
         const randomExercices = filerByMuscle
           .sort(() => Math.random() - 0.5)
           .slice(0, numberOfExercices);
-
-        console.log(randomExercices);
       }
     }
-  }, [askedProgram]);
+  }, []);
 
   return (
     <div>

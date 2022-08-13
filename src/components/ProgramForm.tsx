@@ -50,7 +50,6 @@ export const ProgramForm = () => {
           </select>
         </div>
       ))}
-
       <div className="flex justify-center gap-3 text-center">
         {numberOfMusclesInProgram > 1 && (
           <button
@@ -74,7 +73,6 @@ export const ProgramForm = () => {
           <BsFillPlusCircleFill color="#6466F1" size={20} />
         </button>
       </div>
-
       <div className="mt-8 flex justify-between text-center">
         <button
           type="button"
