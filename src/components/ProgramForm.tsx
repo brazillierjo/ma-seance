@@ -2,17 +2,31 @@ import { getAllMuscles, numberOfExercices } from "../helpers/dataModuler";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { useState } from "react";
 import { HiMinusCircle } from "react-icons/hi";
+import {
+  removeFromLocalStorage,
+  setInLocalStorage
+} from "../helpers/localStorageHandler";
+import { useNavigate } from "react-router-dom";
 
 export const ProgramForm = () => {
   const [numberOfMusclesInProgram, setNumberOfMusclesInProgram] = useState(1);
 
   const listOfMuscles = getAllMuscles();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    for (let i = 0; i < e.target.elements.length; i++) {
-      console.log(e.target.elements[i].value);
+
+    let formData = [];
+    for (let i = 0; i < numberOfMusclesInProgram * 2; i += 2) {
+      let datas = {
+        [e.target.elements[i].value]: e.target.elements[i + 1].value
+      };
+      formData.push(datas);
     }
+
+    setInLocalStorage("program", formData);
+    navigate("/program");
   };
 
   return (
@@ -20,7 +34,7 @@ export const ProgramForm = () => {
       {[...Array(numberOfMusclesInProgram)].map((n, i) => (
         <div className="my-4 grid grid-cols-5 justify-between gap-5" key={i}>
           <select
-            name={`muscle${i}`}
+            name={`muscle-${i}`}
             className="col-span-3 rounded-lg bg-lightGray p-3 shadow-md"
           >
             {listOfMuscles.map((muscle, key) => (
@@ -29,7 +43,7 @@ export const ProgramForm = () => {
           </select>
 
           <select
-            name={`number${i}`}
+            name={`number-${i}`}
             className="col-span-2 rounded-lg bg-lightGray p-3 shadow-md"
           >
             {numberOfExercices(10)}
@@ -64,7 +78,10 @@ export const ProgramForm = () => {
       <div className="mt-8 flex justify-between text-center">
         <button
           type="button"
-          // onClick={() => setInputFields([{ muscle: "", number: "" }])}
+          onClick={() => {
+            setNumberOfMusclesInProgram(1);
+            removeFromLocalStorage("program");
+          }}
           className="rounded-lg bg-gray-300 p-2"
         >
           Remettre à zéro
