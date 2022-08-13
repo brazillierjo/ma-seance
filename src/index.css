@@ -8,5 +8,10 @@
 }
 body {
     font-family: 'SFProText', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        max-width: 700px;
+    max-width: 700px;
+    margin: auto;
+    }
+    
+    .height-page {
+        height: calc(100vh - 64px);
 }

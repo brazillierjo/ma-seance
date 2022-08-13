@@ -19,6 +19,11 @@ export const ProgramForm = () => {
 
     let formData = [];
     for (let i = 0; i < numberOfMusclesInProgram * 2; i += 2) {
+      if (e.target.elements[i + 1].value === "0") {
+        alert("Veuillez choisir un nombre d'exercices");
+        return;
+      }
+
       let datas = {
         [e.target.elements[i].value]: e.target.elements[i + 1].value
       };
@@ -35,7 +40,7 @@ export const ProgramForm = () => {
         <div className="my-4 grid grid-cols-5 justify-between gap-5" key={i}>
           <select
             name={`muscle-${i}`}
-            className="col-span-3 rounded-lg bg-lightGray p-3 shadow-md"
+            className="col-span-3 h-12 rounded-md bg-lightGray p-3 shadow-md"
           >
             {listOfMuscles.map((muscle, key) => (
               <option key={key}>{muscle}</option>
@@ -44,13 +49,13 @@ export const ProgramForm = () => {
 
           <select
             name={`number-${i}`}
-            className="col-span-2 rounded-lg bg-lightGray p-3 shadow-md"
+            className="col-span-2 h-12 rounded-md bg-lightGray p-3 shadow-md"
           >
             {numberOfExercices(10)}
           </select>
         </div>
       ))}
-      <div className="flex justify-center gap-3 text-center">
+      <div className="mt-6 flex justify-center gap-3 text-center">
         {numberOfMusclesInProgram > 1 && (
           <button
             onClick={() =>
@@ -59,7 +64,7 @@ export const ProgramForm = () => {
             type="button"
             className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
           >
-            <HiMinusCircle color="#6466F1" size={20} />
+            <HiMinusCircle color="#6466F1" size={25} />
           </button>
         )}
 
@@ -70,7 +75,7 @@ export const ProgramForm = () => {
           type="button"
           className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
         >
-          <BsFillPlusCircleFill color="#6466F1" size={20} />
+          <BsFillPlusCircleFill color="#6466F1" size={25} />
         </button>
       </div>
       <div className="mt-8 flex justify-between text-center">
@@ -80,14 +85,14 @@ export const ProgramForm = () => {
             setNumberOfMusclesInProgram(1);
             removeFromLocalStorage("program");
           }}
-          className="rounded-lg bg-gray-300 p-2"
+          className="rounded-md bg-gray-600 p-2 text-white"
         >
           Remettre à zéro
         </button>
-        <button type="submit" className="rounded-lg bg-primary p-2 text-white">
+        <button type="submit" className="rounded-md bg-primary p-2 text-white">
           Let's gooooo 💪
         </button>
       </div>
     </form>
   );
-};
+};;
