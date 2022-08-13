@@ -26,7 +26,7 @@ export const ProgramForm = () => {
     }
 
     setInLocalStorage("program", formData);
-    navigate("/program");
+    navigate("/programme");
   };
 
   return (
