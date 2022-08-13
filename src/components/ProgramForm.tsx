@@ -1,102 +1,78 @@
-import { Formik, Form, Field } from "formik";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { getAllMuscles, numberOfExercices } from "../helpers/dataModuler";
-import { setInLocalStorage } from "../helpers/localStorageHandler";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import { useState } from "react";
 import { HiMinusCircle } from "react-icons/hi";
 
-export const ProgramForm: React.FC<{}> = () => {
+export const ProgramForm = () => {
   const [numberOfMusclesInProgram, setNumberOfMusclesInProgram] = useState(1);
 
-  const navigate = useNavigate();
-
   const listOfMuscles = getAllMuscles();
 
-  const initialValues = {
-    numberOfExercices: 0,
-    muscle: listOfMuscles[0]
-  };
-
-  const handleSubmit = (values: {}) => {
-    setInLocalStorage("program", values);
-    if (numberOfMusclesInProgram > 0) navigate("/programme");
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    for (let i = 0; i < e.target.elements.length; i++) {
+      console.log(e.target.elements[i].value);
+    }
   };
 
   return (
-    <>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={(values) => handleSubmit(values)}
-      >
-        <Form>
-          <div id="container">
-            {[...Array(numberOfMusclesInProgram)].map((n, i) => (
-              <DisplayMuscleInProgram key={n} />
+    <form onSubmit={handleSubmit}>
+      {[...Array(numberOfMusclesInProgram)].map((n, i) => (
+        <div className="my-4 grid grid-cols-5 justify-between gap-5" key={i}>
+          <select
+            name={`muscle${i}`}
+            className="col-span-3 rounded-lg bg-lightGray p-3 shadow-md"
+          >
+            {listOfMuscles.map((muscle, key) => (
+              <option key={key}>{muscle}</option>
             ))}
-          </div>
+          </select>
 
-          <div className="flex justify-center gap-3 text-center">
-            {numberOfMusclesInProgram > 1 && (
-              <button
-                onClick={() =>
-                  setNumberOfMusclesInProgram(numberOfMusclesInProgram - 1)
-                }
-                type="button"
-                className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
-              >
-                <HiMinusCircle color="#6466F1" size={20} />
-              </button>
-            )}
+          <select
+            name={`number${i}`}
+            className="col-span-2 rounded-lg bg-lightGray p-3 shadow-md"
+          >
+            {numberOfExercices(10)}
+          </select>
+        </div>
+      ))}
 
-            <button
-              onClick={() =>
-                setNumberOfMusclesInProgram(numberOfMusclesInProgram + 1)
-              }
-              type="button"
-              className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
-            >
-              <BsFillPlusCircleFill color="#6466F1" size={20} />
-            </button>
-          </div>
+      <div className="flex justify-center gap-3 text-center">
+        {numberOfMusclesInProgram > 1 && (
+          <button
+            onClick={() =>
+              setNumberOfMusclesInProgram(numberOfMusclesInProgram - 1)
+            }
+            type="button"
+            className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
+          >
+            <HiMinusCircle color="#6466F1" size={20} />
+          </button>
+        )}
 
-          <div className="text-center">
-            <button
-              type="submit"
-              className="mt-8 rounded-lg bg-primary p-2 text-white"
-            >
-              Let's gooooo 💪
-            </button>
-          </div>
-        </Form>
-      </Formik>
-    </>
-  );
-};
-
-export const DisplayMuscleInProgram = (props: { key: any }) => {
-  const listOfMuscles = getAllMuscles();
-
-  return (
-    <>
-      <div className="my-4 grid grid-cols-5 justify-between gap-5">
-        <Field
-          as="select"
-          className="col-span-3 rounded-lg bg-lightGray p-3"
-          name={`muscle-${props.key}`}
+        <button
+          onClick={() =>
+            setNumberOfMusclesInProgram(numberOfMusclesInProgram + 1)
+          }
+          type="button"
+          className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
         >
-          {listOfMuscles.map((muscle, key) => (
-            <option key={key}>{muscle}</option>
-          ))}
-        </Field>
-        <Field
-          as="select"
-          className="col-span-2 rounded-lg bg-lightGray p-3"
-          name="numberOfExercices"
-        >
-          {numberOfExercices(10)}
-        </Field>
+          <BsFillPlusCircleFill color="#6466F1" size={20} />
+        </button>
       </div>
-    </>
+
+      <div className="mt-8 flex justify-between text-center">
+        <button
+          type="button"
+          // onClick={() => setInputFields([{ muscle: "", number: "" }])}
+          className="rounded-lg bg-gray-300 p-2"
+        >
+          Remettre à zéro
+        </button>
+        <button type="submit" className="rounded-lg bg-primary p-2 text-white">
+          Let's gooooo 💪
+        </button>
+      </div>
+    </form>
   );
 };

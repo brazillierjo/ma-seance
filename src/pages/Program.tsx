@@ -32,7 +32,7 @@ export const Program: React.FC<{}> = () => {
       <div className="mt-12 text-center">
         <button
           onClick={endProgram}
-          className="mb-8 w-full rounded-2xl bg-indigo-700 py-2 text-white shadow-xl"
+          className="mb-8 w-fit rounded-xl bg-indigo-700 px-3 py-2 text-white shadow-xl"
         >
           J'ai fini ma séance ! Fiooou 😮‍💨
         </button>

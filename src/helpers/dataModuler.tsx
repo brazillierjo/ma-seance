@@ -1,4 +1,3 @@
-import { Field } from "formik";
 import data from "../data/workoutexercices.json";
 
 // list all different muscles in data
