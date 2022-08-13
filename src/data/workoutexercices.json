@@ -2,405 +2,405 @@
   {
     "id": "Pectoraux",
     "name": "Développé couché",
-    "path": "../assets/workout-images/chest_1.gif",
+    "path": "chest_1.gif",
     "secondary": ["triceps"]
   },
   {
     "id": "Pectoraux",
     "name": "Développé couché haltères",
-    "path": "../assets/workout-images/chest_2.gif",
+    "path": "chest_2.gif",
     "secondary": ["triceps"]
   },
   {
     "id": "Pectoraux",
     "name": "Développé couché prise inversée",
-    "path": "../assets/workout-images/chest_3.gif",
+    "path": "chest_3.gif",
     "secondary": ["triceps", "biceps"]
   },
   {
     "id": "Pectoraux",
     "name": "Développé décliné à la barre",
-    "path": "../assets/workout-images/chest_4.gif",
+    "path": "chest_4.gif",
     "secondary": ["triceps", "épaules"]
   },
   {
     "id": "Pectoraux",
     "name": "Écartés décliné avec haltères",
-    "path": "../assets/workout-images/chest_5.gif",
+    "path": "chest_5.gif",
     "secondary": ["triceps", "épaules"]
   },
   {
     "id": "Pectoraux",
     "name": "Pompes",
-    "path": "../assets/workout-images/chest_6.gif",
+    "path": "chest_6.gif",
     "secondary": ["triceps"]
   },
   {
     "id": "Pectoraux",
     "name": "Pullover avec haltère",
-    "path": "../assets/workout-images/chest_7.gif",
+    "path": "chest_7.gif",
     "secondary": ["dorseaux", "triceps"]
   },
   {
     "id": "Pectoraux",
     "name": "Développé incliné avec haltères",
-    "path": "../assets/workout-images/chest_8.gif",
+    "path": "chest_8.gif",
     "secondary": ["dorseaux", "épaules"]
   },
   {
     "id": "Pectoraux",
     "name": "Écartés à la poulie haute",
-    "path": "../assets/workout-images/chest_9.gif"
+    "path": "chest_9.gif"
   },
   {
     "id": "Pectoraux",
     "name": "Dips aux barres parallèles",
-    "path": "../assets/workout-images/chest_10.gif",
+    "path": "chest_10.gif",
     "secondary": ["triceps"]
   },
   {
     "id": "Biceps",
     "name": "Curl biceps concentré",
-    "path": "../assets/workout-images/biceps_1.gif"
+    "path": "biceps_1.gif"
   },
   {
     "id": "Biceps",
     "name": "Curl pupitre barre EZ",
-    "path": "../assets/workout-images/biceps_2.gif",
+    "path": "biceps_2.gif",
     "secondary": ["avant-bras"]
   },
   {
     "id": "Biceps",
     "name": "Curl haltère incliné",
-    "path": "../assets/workout-images/biceps_3.gif",
+    "path": "biceps_3.gif",
     "secondary": ["avant-bras"]
   },
   {
     "id": "Biceps",
     "name": "Curl biceps à la poulie basse",
-    "path": "../assets/workout-images/biceps_4.gif"
+    "path": "biceps_4.gif"
   },
   {
     "id": "Biceps",
     "name": "Curl à la poulie vis-à-vis",
-    "path": "../assets/workout-images/biceps_5.gif"
+    "path": "biceps_5.gif"
   },
   {
     "id": "Biceps",
     "name": "Curl à la barre",
-    "path": "../assets/workout-images/biceps_6.gif"
+    "path": "biceps_6.gif"
   },
   {
     "id": "Biceps",
     "name": "Curl haltère prise marteau au pupitre",
-    "path": "../assets/workout-images/biceps_7.gif"
+    "path": "biceps_7.gif"
   },
   {
     "id": "Biceps",
     "name": "Curl Zottman",
-    "path": "../assets/workout-images/biceps_8.gif",
+    "path": "biceps_8.gif",
     "secondary": ["avant-bras"]
   },
   {
     "id": "Dorseaux",
     "name": "Tirage vertical prise inversée",
-    "path": "../assets/workout-images/dos_1.gif",
+    "path": "dos_1.gif",
     "secondary": ["biceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Traction assistée avec élastique",
-    "path": "../assets/workout-images/dos_2.gif",
+    "path": "dos_2.gif",
     "secondary": ["biceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Tirage vertical poitrine",
-    "path": "../assets/workout-images/dos_3.gif",
+    "path": "dos_3.gif",
     "secondary": ["biceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Soulevé de terre",
-    "path": "../assets/workout-images/dos_4.gif",
+    "path": "dos_4.gif",
     "secondary": ["ischio", "fessiers", "quadriceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Pullover avec haltères",
-    "path": "../assets/workout-images/dos_5.gif",
+    "path": "dos_5.gif",
     "secondary": ["triceps", "pectoraux"]
   },
   {
     "id": "Dorseaux",
     "name": "Rowing barre",
-    "path": "../assets/workout-images/dos_6.gif"
+    "path": "dos_6.gif"
   },
   {
     "id": "Dorseaux",
     "name": "Tirage vertical prise serrée",
-    "path": "../assets/workout-images/dos_7.gif",
+    "path": "dos_7.gif",
     "secondary": ["avant-bras", "épaules"]
   },
   {
     "id": "Dorseaux",
     "name": "Traction suppination",
-    "path": "../assets/workout-images/dos_8.gif",
+    "path": "dos_8.gif",
     "secondary": ["avant-bras", "biceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Rowing haltères à un bras",
-    "path": "../assets/workout-images/dos_9.gif",
+    "path": "dos_9.gif",
     "secondary": ["triceps"]
   },
   {
     "id": "Dorseaux",
     "name": "Extension lombaire 45°",
-    "path": "../assets/workout-images/dos_10.gif",
+    "path": "dos_10.gif",
     "secondary": ["fessiers", "ischio"]
   },
   {
     "id": "Dorseaux",
     "name": "Rowing T-bar",
-    "path": "../assets/workout-images/dos_11.gif",
+    "path": "dos_11.gif",
     "secondary": ["épaules"]
   },
   {
     "id": "Abdominaux",
     "name": "Relevé de jambes suspendu",
-    "path": "../assets/workout-images/abdos_1.gif",
+    "path": "abdos_1.gif",
     "secondary": ["Quadriceps"]
   },
   {
     "id": "Abdominaux",
     "name": "Rotation du buste debout à la poulie",
-    "path": "../assets/workout-images/abdos_2.gif"
+    "path": "abdos_2.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Planche latérale",
-    "path": "../assets/workout-images/abdos_3.gif"
+    "path": "abdos_3.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Ergomètre de ski",
-    "path": "../assets/workout-images/abdos_4.gif",
+    "path": "abdos_4.gif",
     "secondary": ["Full body"]
   },
   {
     "id": "Abdominaux",
     "name": "Rotations des abdominaux suspendu",
-    "path": "../assets/workout-images/abdos_5.gif"
+    "path": "abdos_5.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Rotations du buste avec barre",
-    "path": "../assets/workout-images/abdos_6.gif"
+    "path": "abdos_6.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Crunch décliné",
-    "path": "../assets/workout-images/abdos_7.gif"
+    "path": "abdos_7.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Burpees",
-    "path": "../assets/workout-images/abdos_8.gif",
+    "path": "abdos_8.gif",
     "secondary": ["Full body"]
   },
   {
     "id": "Abdominaux",
     "name": "Crunch au sol",
-    "path": "../assets/workout-images/abdos_9.gif"
+    "path": "abdos_9.gif"
   },
   {
     "id": "Abdominaux",
     "name": "Crunch à la poulie",
-    "path": "../assets/workout-images/abdos_11.gif"
+    "path": "abdos_11.gif"
   },
   {
     "id": "Epaules",
     "name": "Face pull",
-    "path": "../assets/workout-images/shoulder_1.gif",
+    "path": "shoulder_1.gif",
     "secondary": ["Dorseaux"]
   },
   {
     "id": "Epaules",
     "name": "Thruster avec kettlebell",
-    "path": "../assets/workout-images/shoulder_2.gif",
+    "path": "shoulder_2.gif",
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
     "id": "Epaules",
     "name": "Élévations latérales avec kettlebell",
-    "path": "../assets/workout-images/shoulder_3.gif",
+    "path": "shoulder_3.gif",
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
     "id": "Epaules",
     "name": "Pec deck inversé",
-    "path": "../assets/workout-images/shoulder_4.gif",
+    "path": "shoulder_4.gif",
     "secondary": ["Dorseaux"]
   },
   {
     "id": "Epaules",
     "name": "Tirage menton barre guidée",
-    "path": "../assets/workout-images/shoulder_5.gif"
+    "path": "shoulder_5.gif"
   },
   {
     "id": "Epaules",
     "name": "Élévations latérales avec landmine",
-    "path": "../assets/workout-images/shoulder_6.gif"
+    "path": "shoulder_6.gif"
   },
   {
     "id": "Epaules",
     "name": "Oiseau assis sur un banc",
-    "path": "../assets/workout-images/shoulder_7.gif",
+    "path": "shoulder_7.gif",
     "secondary": ["Dorseaux"]
   },
   {
     "id": "Epaules",
     "name": "Élévations frontales",
-    "path": "../assets/workout-images/shoulder_8.gif",
+    "path": "shoulder_8.gif",
     "secondary": ["Pectoraux"]
   },
   {
     "id": "Epaules",
     "name": "Développé Arnold",
-    "path": "../assets/workout-images/shoulder_9.gif",
+    "path": "shoulder_9.gif",
     "secondary": ["Triceps"]
   },
   {
     "id": "Epaules",
     "name": "Développé militaire",
-    "path": "../assets/workout-images/shoulder_10.gif",
+    "path": "shoulder_10.gif",
     "secondary": ["Triceps"]
   },
   {
     "id": "Triceps",
     "name": "Extensions des triceps à la machine",
-    "path": "../assets/workout-images/triceps_1.gif"
+    "path": "triceps_1.gif"
   },
   {
     "id": "Triceps",
     "name": "Tate press à un bras avec haltère",
-    "path": "../assets/workout-images/triceps_2.gif"
+    "path": "triceps_2.gif"
   },
   {
     "id": "Triceps",
     "name": "Dips",
-    "path": "../assets/workout-images/triceps_3.gif",
+    "path": "triceps_3.gif",
     "secondary": ["Pectoraux"]
   },
   {
     "id": "Triceps",
     "name": "Pompes",
-    "path": "../assets/workout-images/triceps_4.gif",
+    "path": "triceps_4.gif",
     "secondary": ["Pectoraux"]
   },
   {
     "id": "Triceps",
     "name": "Extensions triceps à la poulie haute",
-    "path": "../assets/workout-images/triceps_5.gif"
+    "path": "triceps_5.gif"
   },
   {
     "id": "Triceps",
     "name": "Kickback",
-    "path": "../assets/workout-images/triceps_6.gif"
+    "path": "triceps_6.gif"
   },
   {
     "id": "Triceps",
     "name": "Barre front",
-    "path": "../assets/workout-images/triceps_7.gif"
+    "path": "triceps_7.gif"
   },
   {
     "id": "Triceps",
     "name": "Dips aux barres parallèles",
-    "path": "../assets/workout-images/triceps_8.gif",
+    "path": "triceps_8.gif",
     "secondary": ["Pectoraux"]
   },
   {
     "id": "Triceps",
     "name": "Extensions des triceps incliné à la poulie basse",
-    "path": "../assets/workout-images/triceps_9.gif",
+    "path": "triceps_9.gif",
     "secondary": ["Pectoraux"]
   },
   {
     "id": "Fessiers",
     "name": "Good morning",
-    "path": "../assets/workout-images/fessiers_1.gif",
+    "path": "fessiers_1.gif",
     "secondary": ["Quadriceps"]
   },
   {
     "id": "Fessiers",
     "name": "Soulevé de terre roumain à la landmine",
-    "path": "../assets/workout-images/fessiers_2.gif",
+    "path": "fessiers_2.gif",
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
     "id": "Fessiers",
     "name": "Rack pull",
-    "path": "../assets/workout-images/fessiers_3.gif",
+    "path": "fessiers_3.gif",
     "secondary": ["Quadriceps", "Ischios", "Dorseaux"]
   },
   {
     "id": "Fessiers",
     "name": "Squat avec landmine",
-    "path": "../assets/workout-images/fessiers_4.gif",
+    "path": "fessiers_4.gif",
     "secondary": ["Quadriceps"]
   },
   {
     "id": "Fessiers",
     "name": "Squat cosaque",
-    "path": "../assets/workout-images/fessiers_5.gif",
+    "path": "fessiers_5.gif",
     "reps": "7 (de chaques côtés)"
   },
   {
     "id": "Fessiers",
     "name": "Hip thrust",
-    "path": "../assets/workout-images/fessiers_6.gif",
+    "path": "fessiers_6.gif",
     "secondary": ["Quadriceps", "Ischios"]
   },
   {
     "id": "Fessiers",
     "name": "Thruster avec kettlebell",
-    "path": "../assets/workout-images/fessiers_7.gif",
+    "path": "fessiers_7.gif",
     "secondary": ["Quadriceps", "Ischios", "Epaules"]
   },
   {
     "id": "Fessiers",
     "name": "Squat barre devant",
-    "path": "../assets/workout-images/fessiers_8.gif"
+    "path": "fessiers_8.gif"
   },
   {
     "id": "Fessiers",
     "name": "Pistol squat",
-    "path": "../assets/workout-images/fessiers_9.gif",
+    "path": "fessiers_9.gif",
     "secondary": ["Quadriceps"]
   },
   {
     "id": "Fessiers",
     "name": "Fentes avant avec kettlebell",
-    "path": "../assets/workout-images/fessiers_10.gif",
+    "path": "fessiers_10.gif",
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
     "id": "Quadriceps",
     "name": "Squat avec landmine",
-    "path": "../assets/workout-images/quadri_1.gif",
+    "path": "quadri_1.gif",
     "secondary": ["Ischios"]
   },
   {
     "id": "Quadriceps",
     "name": "Squat cosaque",
-    "path": "../assets/workout-images/fessiers_5.gif",
+    "path": "fessiers_5.gif",
     "secondary": ["Ischios", "Mollets"]
   },
   {
     "id": "Quadriceps",
     "name": "Overhead squat",
-    "path": "../assets/workout-images/quadri_3.gif",
+    "path": "quadri_3.gif",
     "secondary": ["Ischios"]
   }
 ]
