@@ -34,8 +34,6 @@ export const GeneratedProgram: React.FC<{}> = () => {
     <>
       {program &&
         program.map((group: any, index: any) => {
-          console.log(typeof group);
-
           if (group) {
             return (
               <div
@@ -53,11 +51,11 @@ export const GeneratedProgram: React.FC<{}> = () => {
                         key={index}
                       >
                         <img
-                          className="w-4/12 rounded"
+                          className="w-5/12 rounded"
                           src={`./assets/${exercice.path}`}
                           alt={exercice.name}
                         />
-                        <div className="flex w-8/12 flex-col rounded bg-lightGray p-3">
+                        <div className="flex w-7/12 flex-col rounded bg-lightGray p-3">
                           <h3 className="mb-2 text-lg font-bold">
                             _{exercice.name}
                           </h3>

@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { GeneratedProgram } from "../components/GeneratedProgram";
 import { removeFromLocalStorage } from "../helpers/localStorageHandler";
 
-export const Program: React.FC<{}> = () => {
+export default function Program() {
   const navigate = useNavigate();
 
   const endProgram = () => {
