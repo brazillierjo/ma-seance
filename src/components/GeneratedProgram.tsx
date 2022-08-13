@@ -1,28 +1,28 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { getFromLocalStorage } from "../helpers/localStorageHandler";
 import exercices from "../data/workoutexercices.json";
 
 export const GeneratedProgram: React.FC<{}> = () => {
-  const [program, setProgram] = useState<[] | null>(
-    getFromLocalStorage("program")
-  );
+  const askedProgram = getFromLocalStorage("program");
 
-  const generateProgram = () => {
-    if (program) {
-      for (let i = 0; i < program.length; i++) {
-        const muscle = Object.keys(program[i])[0];
-        const numberOfExercices = Object.values(program[i])[0];
+  useEffect(() => {
+    if (askedProgram) {
+      for (let i = 0; i < askedProgram.length; i++) {
+        const muscles = Object.keys(askedProgram[i]);
+        const numberOfExercices = Object.values(askedProgram[i]);
 
-        const dataAsker = exercices.filter(
-          (exercice) => exercice.id === muscle
-        );
+        const filerByMuscle: any = exercices.filter((exercice) => {
+          return muscles.includes(exercice.id);
+        });
 
-        console.log(dataAsker);
+        const randomExercices = filerByMuscle
+          .sort(() => Math.random() - 0.5)
+          .slice(0, numberOfExercices);
+
+        console.log(randomExercices);
       }
     }
-  };
-
-  generateProgram();
+  }, [askedProgram]);
 
   return (
     <div>
