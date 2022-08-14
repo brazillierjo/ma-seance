@@ -36,16 +36,16 @@
     "secondary": ["triceps"]
   },
   {
-    "id": "Pectoraux",
-    "name": "Pullover avec haltère",
-    "path": "chest_7.gif",
-    "secondary": ["dorseaux", "triceps"]
+		"id": "Pectoraux",
+		"name": "Pullover avec haltère",
+		"path": "chest_7.gif",
+		"secondary": ["Dorsaux", "triceps"]
   },
   {
-    "id": "Pectoraux",
-    "name": "Développé incliné avec haltères",
-    "path": "chest_8.gif",
-    "secondary": ["dorseaux", "épaules"]
+		"id": "Pectoraux",
+		"name": "Développé incliné avec haltères",
+		"path": "chest_8.gif",
+		"secondary": ["Dorsaux", "épaules"]
   },
   {
     "id": "Pectoraux",
@@ -102,69 +102,69 @@
     "secondary": ["avant-bras"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Tirage vertical prise inversée",
-    "path": "dos_1.gif",
-    "secondary": ["biceps"]
+		"id": "Dorsaux",
+		"name": "Tirage vertical prise inversée",
+		"path": "dos_1.gif",
+		"secondary": ["biceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Traction assistée avec élastique",
-    "path": "dos_2.gif",
-    "secondary": ["biceps"]
+		"id": "Dorsaux",
+		"name": "Traction assistée avec élastique",
+		"path": "dos_2.gif",
+		"secondary": ["biceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Tirage vertical poitrine",
-    "path": "dos_3.gif",
-    "secondary": ["biceps"]
+		"id": "Dorsaux",
+		"name": "Tirage vertical poitrine",
+		"path": "dos_3.gif",
+		"secondary": ["biceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Soulevé de terre",
-    "path": "dos_4.gif",
-    "secondary": ["ischio", "fessiers", "quadriceps"]
+		"id": "Dorsaux",
+		"name": "Soulevé de terre",
+		"path": "dos_4.gif",
+		"secondary": ["ischio", "fessiers", "quadriceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Pullover avec haltères",
-    "path": "dos_5.gif",
-    "secondary": ["triceps", "pectoraux"]
+		"id": "Dorsaux",
+		"name": "Pullover avec haltères",
+		"path": "dos_5.gif",
+		"secondary": ["triceps", "pectoraux"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Rowing barre",
-    "path": "dos_6.gif"
+		"id": "Dorsaux",
+		"name": "Rowing barre",
+		"path": "dos_6.gif"
   },
   {
-    "id": "Dorseaux",
-    "name": "Tirage vertical prise serrée",
-    "path": "dos_7.gif",
-    "secondary": ["avant-bras", "épaules"]
+		"id": "Dorsaux",
+		"name": "Tirage vertical prise serrée",
+		"path": "dos_7.gif",
+		"secondary": ["avant-bras", "épaules"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Traction suppination",
-    "path": "dos_8.gif",
-    "secondary": ["avant-bras", "biceps"]
+		"id": "Dorsaux",
+		"name": "Traction suppination",
+		"path": "dos_8.gif",
+		"secondary": ["avant-bras", "biceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Rowing haltères à un bras",
-    "path": "dos_9.gif",
-    "secondary": ["triceps"]
+		"id": "Dorsaux",
+		"name": "Rowing haltères à un bras",
+		"path": "dos_9.gif",
+		"secondary": ["triceps"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Extension lombaire 45°",
-    "path": "dos_10.gif",
-    "secondary": ["fessiers", "ischio"]
+		"id": "Dorsaux",
+		"name": "Extension lombaire 45°",
+		"path": "dos_10.gif",
+		"secondary": ["fessiers", "ischio"]
   },
   {
-    "id": "Dorseaux",
-    "name": "Rowing T-bar",
-    "path": "dos_11.gif",
-    "secondary": ["épaules"]
+		"id": "Dorsaux",
+		"name": "Rowing T-bar",
+		"path": "dos_11.gif",
+		"secondary": ["épaules"]
   },
   {
     "id": "Abdominaux",
@@ -220,10 +220,10 @@
     "path": "abdos_11.gif"
   },
   {
-    "id": "Epaules",
-    "name": "Face pull",
-    "path": "shoulder_1.gif",
-    "secondary": ["Dorseaux"]
+		"id": "Epaules",
+		"name": "Face pull",
+		"path": "shoulder_1.gif",
+		"secondary": ["Dorsaux"]
   },
   {
     "id": "Epaules",
@@ -238,10 +238,10 @@
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
-    "id": "Epaules",
-    "name": "Pec deck inversé",
-    "path": "shoulder_4.gif",
-    "secondary": ["Dorseaux"]
+		"id": "Epaules",
+		"name": "Pec deck inversé",
+		"path": "shoulder_4.gif",
+		"secondary": ["Dorsaux"]
   },
   {
     "id": "Epaules",
@@ -254,10 +254,10 @@
     "path": "shoulder_6.gif"
   },
   {
-    "id": "Epaules",
-    "name": "Oiseau assis sur un banc",
-    "path": "shoulder_7.gif",
-    "secondary": ["Dorseaux"]
+		"id": "Epaules",
+		"name": "Oiseau assis sur un banc",
+		"path": "shoulder_7.gif",
+		"secondary": ["Dorsaux"]
   },
   {
     "id": "Epaules",
@@ -339,10 +339,10 @@
     "secondary": ["Quadriceps", "Mollets"]
   },
   {
-    "id": "Fessiers",
-    "name": "Rack pull",
-    "path": "fessiers_3.gif",
-    "secondary": ["Quadriceps", "Ischios", "Dorseaux"]
+		"id": "Fessiers",
+		"name": "Rack pull",
+		"path": "fessiers_3.gif",
+		"secondary": ["Quadriceps", "Ischios", "Dorsaux"]
   },
   {
     "id": "Fessiers",
