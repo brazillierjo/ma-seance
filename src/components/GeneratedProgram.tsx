@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { getFromLocalStorage } from "../helpers/localStorageHandler";
 import exercices from "../data/workoutexercices.json";
+import { DataType, Index } from "../types/DataTypes";
 
 export const GeneratedProgram: React.FC<{}> = () => {
   const askedProgram = useMemo(() => getFromLocalStorage("program"), []);
@@ -44,7 +45,7 @@ export const GeneratedProgram: React.FC<{}> = () => {
                   {group[0] && group[0].id}
                 </h2>
                 {group &&
-                  group.map((exercice: any, index: any) => {
+                  group.map((exercice: DataType, index: Index) => {
                     return (
                       <div
                         className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4 dark:text-white"
@@ -74,7 +75,7 @@ export const GeneratedProgram: React.FC<{}> = () => {
                           <div className="mt-auto flex flex-wrap">
                             {exercice.secondary &&
                               exercice.secondary.map(
-                                (secondary: any, index: any) => {
+                                (secondary: string, index: number) => {
                                   return (
                                     <p
                                       className="bg-light dark:bg-dark m-1 w-fit rounded px-2 py-1 dark:text-white"

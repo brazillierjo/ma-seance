@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllMuscles } from "../helpers/dataModuler";
 import exercices from "../data/workoutexercices.json";
+import { Index } from "../types/DataTypes";
 
 export default function ListForEachMuscles() {
   const [selectedMuscle, setSelectedMuscle] = useState<string | null>(
@@ -14,7 +15,7 @@ export default function ListForEachMuscles() {
   useEffect(() => {
     if (selectedMuscle) {
       let filteredMuscle = exercices.filter(
-        (exercice: any) => exercice.id === selectedMuscle
+        (exercice) => exercice.id === selectedMuscle
       );
       setMuscles(filteredMuscle);
     }
@@ -44,7 +45,7 @@ export default function ListForEachMuscles() {
 
       <div className="py-4">
         {muscles &&
-          muscles.map((muscle: any, index) => (
+          muscles.map((muscle: any, index: Index) => (
             <div
               className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4"
               key={index}
@@ -58,16 +59,18 @@ export default function ListForEachMuscles() {
                 <h3 className="mb-2 text-lg font-bold">_{muscle.name}</h3>
                 <div className="mt-auto flex flex-wrap">
                   {muscle.secondary &&
-                    muscle.secondary.map((secondary: any, index: any) => {
-                      return (
-                        <p
-                          className="bg-light dark:bg-dark m-1 w-fit rounded px-2 py-1"
-                          key={index}
-                        >
-                          {secondary}
-                        </p>
-                      );
-                    })}
+                    muscle.secondary.map(
+                      (secondary: string[], index: Index) => {
+                        return (
+                          <p
+                            className="bg-light dark:bg-dark m-1 w-fit rounded px-2 py-1"
+                            key={index}
+                          >
+                            {secondary}
+                          </p>
+                        );
+                      }
+                    )}
                 </div>
               </div>
             </div>
