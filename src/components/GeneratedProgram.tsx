@@ -51,11 +51,13 @@ export const GeneratedProgram: React.FC<{}> = () => {
                         className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4 dark:text-white"
                         key={index}
                       >
-                        <img
-                          className="w-5/12 rounded-l"
-                          src={`./assets/${exercice.path}`}
-                          alt={exercice.name}
-                        />
+                        <div className="w-5/12">
+                          <img
+                            className="aspect-square rounded-l"
+                            src={`./assets/${exercice.path}`}
+                            alt={exercice.name}
+                          />
+                        </div>
                         <div className="bg-lightGray dark:bg-darkGray flex w-7/12 flex-col rounded-r p-3 dark:text-white">
                           <h3 className="mb-2 text-lg font-bold">
                             _{exercice.name}

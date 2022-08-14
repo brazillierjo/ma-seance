@@ -50,11 +50,13 @@ export default function ListForEachMuscles() {
               className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4"
               key={index}
             >
-              <img
-                className="w-5/12 rounded-l"
-                src={`./assets/${muscle.path}`}
-                alt={muscle.name}
-              />
+              <div className="w-5/12">
+                <img
+                  className="rounded-l"
+                  src={`./assets/${muscle.path}`}
+                  alt={muscle.name}
+                />
+              </div>
               <div className="bg-lightGray dark:bg-darkGray flex w-7/12 flex-col rounded-r p-3">
                 <h3 className="mb-2 text-lg font-bold">_{muscle.name}</h3>
                 <div className="mt-auto flex flex-wrap">
