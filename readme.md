@@ -6,4 +6,4 @@ ma-seance est une web app mobile sous `React` avec un template `TypeScript` et `
 * **npm i**
 * **npmstart** 
 
-A voir sur ma-seance-qnf75bjnp-brazillierjo.vercel.app ou https://ma-seance.fr
+A voir sur https://ma-seance-qnf75bjnp-brazillierjo.vercel.app ou https://ma-seance.fr
