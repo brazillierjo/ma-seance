@@ -12,7 +12,7 @@ export default function Program() {
 
   if (localStorage.getItem("program")) {
     return (
-      <>
+      <div className="bg-light height-page dark:bg-dark p-3 dark:text-white">
         <GeneratedProgram />
         <div className="mt-12 text-center">
           <button
@@ -22,18 +22,18 @@ export default function Program() {
             J'ai fini ma séance ! Fiooou 😮‍💨
           </button>
         </div>
-      </>
+      </div>
     );
   }
   return (
-    <div className="p-4">
+    <div className="bg-light height-page dark:bg-dark p-4 dark:text-white">
       <p className="text-center">
         Pas de programme en cours. Allez à l'accueil pour en générer un ! 💪
       </p>
 
       <div className="text-center">
         <Link to="/">
-          <button className="mt-8 rounded-lg bg-primary px-4 py-2 text-white">
+          <button className="bg-primary mt-8 rounded-lg px-4 py-2 text-white">
             Aller à l'accueil
           </button>
         </Link>

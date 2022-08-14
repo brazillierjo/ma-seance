@@ -1,38 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getAllMuscles } from "../helpers/dataModuler";
 import exercices from "../data/workoutexercices.json";
 
 export default function ListForEachMuscles() {
-  const [selectedMuscle, setSelectedMuscle] = useState<string | null>();
+  const [selectedMuscle, setSelectedMuscle] = useState<string | null>(
+    "Abdominaux"
+  );
+
+  const [muscles, setMuscles] = useState<Object[] | null>();
 
   const listOfMuscles = getAllMuscles();
 
-  const exercicesForSelectedMuscle: any = () => {
+  useEffect(() => {
     if (selectedMuscle) {
       let filteredMuscle = exercices.filter(
-        (exercice: any) => exercice.muscle === selectedMuscle
+        (exercice: any) => exercice.id === selectedMuscle
       );
-
-      return filteredMuscle;
+      setMuscles(filteredMuscle);
     }
-  };
+
+    if (selectedMuscle === null) {
+      setMuscles(exercices);
+    }
+  }, [selectedMuscle]);
 
   return (
     <>
-      <div className="mt-8 flex gap-4 overflow-x-auto py-3">
+      <div className="bg-light dark:bg-dark mt-8 flex gap-4 overflow-x-auto rounded py-3 px-2">
         {listOfMuscles.map((muscle) => (
           <button
             key={muscle}
-            onClick={() => {
-              if (selectedMuscle === muscle) {
-                setSelectedMuscle("");
-              }
-              setSelectedMuscle(muscle);
-            }}
+            onClick={() => setSelectedMuscle(muscle)}
             className={`${
               selectedMuscle === muscle
                 ? "bg-primary text-white"
-                : "bg-lightGray"
+                : "bg-lightGray dark:bg-darkGray"
             } rounded px-2 py-1`}
           >
             {muscle}
@@ -40,7 +42,37 @@ export default function ListForEachMuscles() {
         ))}
       </div>
 
-      <div>{exercicesForSelectedMuscle}</div>
+      <div className="py-4">
+        {muscles &&
+          muscles.map((muscle: any, index) => (
+            <div
+              className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4"
+              key={index}
+            >
+              <img
+                className="w-5/12 rounded-l"
+                src={`./assets/${muscle.path}`}
+                alt={muscle.name}
+              />
+              <div className="bg-lightGray dark:bg-darkGray flex w-7/12 flex-col rounded-r p-3">
+                <h3 className="mb-2 text-lg font-bold">_{muscle.name}</h3>
+                <div className="mt-auto flex flex-wrap">
+                  {muscle.secondary &&
+                    muscle.secondary.map((secondary: any, index: any) => {
+                      return (
+                        <p
+                          className="bg-light dark:bg-dark m-1 w-fit rounded px-2 py-1"
+                          key={index}
+                        >
+                          {secondary}
+                        </p>
+                      );
+                    })}
+                </div>
+              </div>
+            </div>
+          ))}
+      </div>
     </>
   );
 }

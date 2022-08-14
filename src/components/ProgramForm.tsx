@@ -40,7 +40,7 @@ export const ProgramForm = () => {
         <div className="my-4 grid grid-cols-5 justify-between gap-5" key={i}>
           <select
             name={`muscle-${i}`}
-            className="col-span-3 h-12 rounded-md bg-lightGray p-3 shadow-md"
+            className="bg-lightGray dark:bg-darkGray col-span-3 h-12 rounded-md p-3 shadow-md dark:text-white"
           >
             {listOfMuscles.map((muscle, key) => (
               <option key={key}>{muscle}</option>
@@ -49,7 +49,7 @@ export const ProgramForm = () => {
 
           <select
             name={`number-${i}`}
-            className="col-span-2 h-12 rounded-md bg-lightGray p-3 shadow-md"
+            className="bg-lightGray dark:bg-darkGray col-span-2 h-12 rounded-md p-3 shadow-md dark:text-white"
           >
             {numberOfExercices(10)}
           </select>
@@ -62,7 +62,7 @@ export const ProgramForm = () => {
               setNumberOfMusclesInProgram(numberOfMusclesInProgram - 1)
             }
             type="button"
-            className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
+            className="border-primary transform rounded-md border-2 px-2 py-1 shadow duration-150 hover:shadow-lg"
           >
             <HiMinusCircle color="#6466F1" size={25} />
           </button>
@@ -73,7 +73,7 @@ export const ProgramForm = () => {
             setNumberOfMusclesInProgram(numberOfMusclesInProgram + 1)
           }
           type="button"
-          className="transform rounded-md border-2 border-primary px-2 py-1 shadow duration-150 hover:shadow-lg"
+          className="border-primary transform rounded-md border-2 px-2 py-1 shadow duration-150 hover:shadow-lg"
         >
           <BsFillPlusCircleFill color="#6466F1" size={25} />
         </button>
@@ -89,7 +89,7 @@ export const ProgramForm = () => {
         >
           Remettre à zéro
         </button>
-        <button type="submit" className="rounded-md bg-primary p-2 text-white">
+        <button type="submit" className="bg-primary rounded-md p-2 text-white">
           Let's gooooo 💪
         </button>
       </div>

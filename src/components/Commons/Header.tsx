@@ -1,6 +1,8 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { toggleDarkMode } from "../../features/darkModeSlice";
+import { useDispatch } from "react-redux";
 
 //assets
 import { HiMenuAlt3 } from "react-icons/hi";
@@ -8,15 +10,21 @@ import { FcTodoList } from "react-icons/fc";
 import { CgGym } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsCalendarCheck } from "react-icons/bs";
+import { CgDarkMode } from "react-icons/cg";
 
 export default function Header() {
+  const dipatch = useDispatch();
+
   return (
     <>
-      <div className="flex h-16 items-center justify-between border-b-2 border-indigo-500 px-4 shadow-lg">
+      <div className="bg-light dark:bg-dark flex h-16 items-center justify-between border-b-2 border-indigo-500 px-4 shadow-lg dark:text-white">
         <Link to={"/"}>
           <CgGym size={35} />
         </Link>
         <div>
+          <button onClick={() => dipatch(toggleDarkMode())}>
+            <CgDarkMode size={30} className="mr-6" />
+          </button>
           <Menu as="div" className="relative inline-block text-left">
             <Menu.Button>
               <HiMenuAlt3 size={33} />
@@ -30,7 +38,7 @@ export default function Header() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 z-30 mt-2 w-56 origin-top-right space-y-8 rounded-md bg-white px-5 py-2 shadow-lg">
+              <Menu.Items className="bg-light dark:bg-dark absolute right-0 z-30 mt-2 w-56 origin-top-right space-y-8 rounded-md px-5 py-2 shadow-lg dark:text-white">
                 <Menu.Item>
                   <Link to={"/"}>
                     <button className="flex items-center py-2">

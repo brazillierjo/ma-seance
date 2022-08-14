@@ -37,7 +37,7 @@ export const GeneratedProgram: React.FC<{}> = () => {
           if (group) {
             return (
               <div
-                className="mx-2 my-4 rounded-md border-4 border-primary bg-lightGray p-1"
+                className="border-primary bg-lightGray dark:bg-darkGray my-4 rounded-md border-4 p-2"
                 key={index}
               >
                 <h2 className="px-4 text-2xl font-bold italic">
@@ -47,15 +47,15 @@ export const GeneratedProgram: React.FC<{}> = () => {
                   group.map((exercice: any, index: any) => {
                     return (
                       <div
-                        className="my-4 mx-4 flex rounded bg-white p-4"
+                        className="bg-light dark:bg-dark my-4 mx-4 flex rounded p-4 dark:text-white"
                         key={index}
                       >
                         <img
-                          className="w-5/12 rounded"
+                          className="w-5/12 rounded-l"
                           src={`./assets/${exercice.path}`}
                           alt={exercice.name}
                         />
-                        <div className="flex w-7/12 flex-col rounded bg-lightGray p-3">
+                        <div className="bg-lightGray dark:bg-darkGray flex w-7/12 flex-col rounded-r p-3 dark:text-white">
                           <h3 className="mb-2 text-lg font-bold">
                             _{exercice.name}
                           </h3>
@@ -77,7 +77,7 @@ export const GeneratedProgram: React.FC<{}> = () => {
                                 (secondary: any, index: any) => {
                                   return (
                                     <p
-                                      className="m-1 w-fit rounded bg-white px-2 py-1"
+                                      className="bg-light dark:bg-dark m-1 w-fit rounded px-2 py-1 dark:text-white"
                                       key={index}
                                     >
                                       {secondary}
