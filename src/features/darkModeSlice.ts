@@ -5,11 +5,11 @@ import { RootState } from "../app/store";
 const initialState: boolean = false;
 
 const darkModeSlice = createSlice({
-  name: "darkMode",
-  initialState,
-  reducers: {
-    toggleDarkMode: (state) => !state
-  }
+	name: "darkMode",
+	initialState,
+	reducers: {
+		toggleDarkMode: (state) => !state,
+	},
 });
 
 export const { toggleDarkMode } = darkModeSlice.actions;

@@ -1,7 +1,7 @@
 {
-  "tabWidth": 4,
-  "useTabs": true,
-  "insertSpaces": true,
-  "trimTrailingWhitespace": true,
-  "insertFinalNewline": true
+	"tabWidth": 4,
+	"useTabs": true,
+	"insertSpaces": true,
+	"trimTrailingWhitespace": true,
+	"insertFinalNewline": true
 }
