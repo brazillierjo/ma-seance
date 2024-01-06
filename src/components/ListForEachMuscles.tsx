@@ -46,7 +46,7 @@ export default function ListForEachMuscles() {
                 <img className="rounded-l" src={`./assets/${muscle.path}`} alt={muscle.name} />
               </div>
               <div className="flex w-7/12 flex-col rounded-r bg-lightGray p-3 dark:bg-darkGray">
-                <h3 className="mb-2 text-lg font-bold">_{muscle.name}</h3>
+                <h3 className="mb-2 text-lg font-bold">{muscle.name}</h3>
                 <div className="mt-auto flex flex-wrap">
                   {muscle.secondary &&
                     muscle.secondary.map((secondary: string[], index: Index) => {
