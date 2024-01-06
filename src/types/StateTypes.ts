@@ -1,3 +1,3 @@
 export type DarkModeStateType = {
-	darkMode: string;
+  darkMode: string;
 };
