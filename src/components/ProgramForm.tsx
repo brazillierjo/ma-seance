@@ -63,7 +63,7 @@ export const ProgramForm = () => {
 					<button
 						onClick={() =>
 							setNumberOfMusclesInProgram(
-								numberOfMusclesInProgram - 1
+								numberOfMusclesInProgram - 1,
 							)
 						}
 						type="button"
@@ -76,7 +76,7 @@ export const ProgramForm = () => {
 				<button
 					onClick={() =>
 						setNumberOfMusclesInProgram(
-							numberOfMusclesInProgram + 1
+							numberOfMusclesInProgram + 1,
 						)
 					}
 					type="button"

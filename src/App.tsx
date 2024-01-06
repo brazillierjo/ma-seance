@@ -9,11 +9,11 @@ import { DarkModeStateType } from "./types/StateTypes";
 
 function App() {
 	const DarkModeState = useSelector(
-		(state: DarkModeStateType) => state.darkMode
+		(state: DarkModeStateType) => state.darkMode,
 	);
 
 	return (
-		<div className={`${DarkModeState && "dark"} mockup-iphone`}>
+		<div className={`${DarkModeState && "dark"}`}>
 			{window.innerWidth > 768 && (
 				<div className="mb-12 rounded bg-gray-300 p-2">
 					<p className="text-center">

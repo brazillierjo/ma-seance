@@ -5,7 +5,7 @@ import { Index } from "../types/DataTypes";
 
 export default function ListForEachMuscles() {
 	const [selectedMuscle, setSelectedMuscle] = useState<string | null>(
-		"Abdominaux"
+		"Abdominaux",
 	);
 
 	const [muscles, setMuscles] = useState<Object[] | null>();
@@ -15,7 +15,7 @@ export default function ListForEachMuscles() {
 	useEffect(() => {
 		if (selectedMuscle) {
 			let filteredMuscle = exercices.filter(
-				(exercice) => exercice.id === selectedMuscle
+				(exercice) => exercice.id === selectedMuscle,
 			);
 			setMuscles(filteredMuscle);
 		}
@@ -66,7 +66,7 @@ export default function ListForEachMuscles() {
 										muscle.secondary.map(
 											(
 												secondary: string[],
-												index: Index
+												index: Index,
 											) => {
 												return (
 													<p
@@ -76,7 +76,7 @@ export default function ListForEachMuscles() {
 														{secondary}
 													</p>
 												);
-											}
+											},
 										)}
 								</div>
 							</div>
